@@ -1,0 +1,49 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="citasmdt.list">
+      <field name="name">Listado</field>
+      <field name="model">mdt.citasmdt</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="autor"/>
+          <field name="cita"/>
+          <field name="fecha"/>
+          <field name="orden"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="citasmdt.action_window">
+      <field name="name">Ventana de citas</field>
+      <field name="res_model">mdt.citasmdt</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="citasmdt.action_server">
+      <field name="name">citasmdt server</field>
+      <field name="model_id" ref="model_citasmdt_citasmdt"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <menuitem name="citasmdt" id="citasmdt.menu_root"/>
+
+    <!-- menu categories -->
+    <menuitem name="Citas" id="citasmdt.menu_1" parent="citasmdt.menu_root"/>
+
+    <!-- actions -->
+    <menuitem name="Listado" id="citasmdt.menu_1_list" parent="citasmdt.menu_1"
+              action="citasmdt.action_window"/>
+  </data>
+</odoo>

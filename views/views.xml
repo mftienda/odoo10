@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="citasmdt.list">
+      <field name="name">citasmdt list</field>
+      <field name="model">citasmdt.citasmdt</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="citasmdt.action_window">
+      <field name="name">citasmdt window</field>
+      <field name="res_model">citasmdt.citasmdt</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="citasmdt.action_server">
+      <field name="name">citasmdt server</field>
+      <field name="model_id" ref="model_citasmdt_citasmdt"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="citasmdt" id="citasmdt.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="citasmdt.menu_1" parent="citasmdt.menu_root"/>
+    <menuitem name="Menu 2" id="citasmdt.menu_2" parent="citasmdt.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="citasmdt.menu_1_list" parent="citasmdt.menu_1"
+              action="citasmdt.action_window"/>
+    <menuitem name="Server to list" id="citasmdt" parent="citasmdt.menu_2"
+              action="citasmdt.action_server"/>
+    -->
+  </data>
+</odoo>
